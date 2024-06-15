@@ -1,22 +1,21 @@
-"use client"
+// Corrected version
+import React, { useEffect } from 'react';
 
-import React from 'react'
-import { useEffect } from 'react'
-
-
-const error = ({error, reset}) => {
+const Error = ({ error, reset }) => {
   useEffect(() => {
-    console.log(error)
-  },[error])
+    console.log(error);
+  }, [error]);
 
   return (
     <div className='text-center mt-10'>
-    <div>
+      <div>
         <h1>Something Went Wrong. Please try again later.</h1>
-        <button className='hover:text-amber-600' onClick={() => {reset()}}>Try Again</button>
+        <button className='hover:text-amber-600' onClick={() => reset()}>
+          Try Again
+        </button>
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default error
+export default Error;
