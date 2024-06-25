@@ -1,4 +1,4 @@
-// Corrected version
+"use client"
 import React, { useEffect } from 'react';
 
 const Error = ({ error, reset }) => {
