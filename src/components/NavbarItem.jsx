@@ -8,8 +8,9 @@ const NavbarItem = ({ title, param }) => {
   const searchParams = useSearchParams();
   const genre = searchParams.get("genre");
   return (
-    <Suspense>
+    
       <div>
+        <Suspense fallback={<div>Loading...</div>}>
       <Link
         className={`hover: text-amber-600 font-semibold ${
           genre === param
@@ -20,8 +21,9 @@ const NavbarItem = ({ title, param }) => {
       >
         {title}
       </Link>
+      </Suspense>
     </div>
-    </Suspense>
+    
   );
 };
 
